@@ -13,6 +13,6 @@
     {{- format_kwargs(d.pkg.docker.repo) }}
     - humanname: {{ grains["os"] }} {{ grains["oscodename"]|capitalize }} Docker Package Repository
     - refresh: {{ d.misc.refresh }}
-    - onlyif: {{ d.pkg.docker.repo != null }}
+    - onlyif: {{ d.pkg.docker.repo }}
 
     {%- endif %}
